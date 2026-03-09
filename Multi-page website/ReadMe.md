@@ -22,4 +22,4 @@ This project is a multi-page HTML website created for a web development assignme
 - HTML5
 
 ## Screenshot
-![Profile Page Screenshot](screenshot.png)
+![Profile Page Screenshot](images/screenshot.png)
