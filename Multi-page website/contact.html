@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact | Jaiden Carnahan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<header>
+  <h1>Contact Me</h1>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+
+<section>
+  <h2>Get in Touch</h2>
+
+  <p>If you would like to contact me, please fill out the form below.</p>
+
+  <form>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required minlength="2">
+
+    <br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <br><br>
+
+    <label for="topic">Topic:</label>
+    <select id="topic" name="topic">
+      <option value="general">General Question</option>
+      <option value="projects">Projects</option>
+      <option value="collaboration">Collaboration</option>
+    </select>
+
+    <br><br>
+
+    <fieldset>
+      <legend>Preferred Contact Method</legend>
+
+      <input type="radio" id="contact-email" name="contact-method" value="email" required>
+      <label for="contact-email">Email</label>
+
+      <input type="radio" id="contact-message" name="contact-method" value="message">
+      <label for="contact-message">Website Message</label>
+
+    </fieldset>
+
+    <br>
+
+    <label for="message">Message:</label>
+    <br>
+    <textarea id="message" name="message" rows="5" cols="40" required minlength="10"></textarea>
+
+    <br><br>
+
+    <button type="submit">Send Message</button>
+
+  </form>
+</section>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 Jaiden Carnahan</p>
+  <p>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener">
+      Visit My GitHub Profile
+    </a>
+  </p>
+</footer>
+
+</body>
+</html>
