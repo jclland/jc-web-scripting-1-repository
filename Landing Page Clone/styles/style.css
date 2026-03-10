@@ -1,0 +1,161 @@
+:root {
+  --max-width: 60rem;
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 2rem;
+
+  --bg-color: #f6efe7;
+  --text-color: #4b2e2b;
+  --muted-color: #7a5c4f;
+
+  --border: 1px solid #e6d5c3;
+  --shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/*---------------------------------*/
+body {
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  margin: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: var(--space-2);
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-2);
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-1);
+}
+
+/*---------------------------------*/
+.container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: var(--space-2);
+}
+
+section {
+  padding: var(--space-3) var(--space-2);
+}
+
+p {
+  margin-bottom: var(--space-2);
+}
+
+/*---------------------------------*/
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  background-color: white;
+  border-bottom: var(--border);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: var(--space-2);
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+}
+
+/*---------------------------------*/
+.hero {
+  background-image: url("../images/coffeeshop.webp");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: var(--space-3);
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+
+.hero .container {
+  position: relative;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-1);
+}
+
+/*---------------------------------*/
+.menu-tabs {
+  display: flex;
+  gap: var(--space-1);
+  margin-bottom: var(--space-2);
+}
+
+.menu-grid {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.menu-item {
+  border: var(--border);
+  padding: var(--space-2);
+  background: white;
+  box-shadow: var(--shadow);
+}
+
+/*---------------------------------*/
+.muted {
+  color: var(--muted-color);
+}
+
+.btn {
+  display: inline-block;
+  padding: var(--space-1) var(--space-2);
+  background-color: #6b4f4f;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  box-shadow: var(--shadow);
+}
+
+.btn:hover {
+  background-color: #4b2e2b;
+}
+
+/*---------------------------------*/
+iframe {
+  width: 100%;
+  border: 0;
+}
+
+/*---------------------------------*/
+@media (min-width: 768px) {
+
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
