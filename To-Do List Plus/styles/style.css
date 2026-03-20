@@ -1,0 +1,104 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #e6f4f9;
+  color: #033b4a;
+}
+
+/*---------------------------------*/
+header {
+  margin-bottom: 20px;
+}
+/*---------------------------------*/
+section {
+  background: #ffffff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #b3e0ec;
+}
+
+/*---------------------------------*/
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 300px;
+}
+
+/*---------------------------------*/
+input, select {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #7cc7d9;
+  border-radius: 4px;
+}
+
+/*---------------------------------*/
+button {
+  padding: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #0288a7;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #026d85;
+}
+
+/*---------------------------------*/
+section button {
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+
+/*---------------------------------*/
+#error-message {
+  color: #b00020;
+  font-size: 14px;
+}
+
+/*---------------------------------*/
+#task-list {
+  list-style: none;
+  padding: 0;
+}
+
+/*---------------------------------*/
+#task-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f0fbff;
+  padding: 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  border: 1px solid #cceaf3;
+}
+
+/*---------------------------------*/
+.task-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/*---------------------------------*/
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/*---------------------------------*/
+small {
+  color: #055a6d;
+}
+
+/*---------------------------------*/
+#task-counter {
+  font-weight: bold;
+}
