@@ -1,0 +1,195 @@
+:root {
+    --deep-ocean: #002b36;
+    --seafoam: #2aa198;
+    --sand: #eee8d5;
+    
+    --correct: #2e7d32;
+    --present: #f9a825;
+    --absent: #546e7a;
+}
+
+/*base styles for both pages */
+body {
+    background-color: var(--deep-ocean);
+    color: var(--sand);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    line-height: 1.6;
+}
+
+h1 {
+    color: var(--seafoam);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-bottom: 10px;
+}
+
+/*---------------------------------*/
+/*INDEX PAGE SPECIFIC STYLES*/
+/*---------------------------------*/
+.hub-container {
+    max-width: 600px;
+    text-align: center;
+    padding: 40px;
+    border: 2px solid rgba(42, 161, 152, 0.3);
+    border-radius: 15px;
+    background: rgba(0, 43, 54, 0.8);
+}
+
+.project-card {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: rgba(238, 232, 213, 0.05);
+    border-left: 5px solid var(--seafoam);
+    border-radius: 4px;
+    text-align: left;
+}
+
+.project-card h2 {
+    color: var(--seafoam);
+    margin-top: 0;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--seafoam);
+    color: var(--deep-ocean);
+    text-decoration: none;
+    padding: 12px 30px;
+    font-weight: bold;
+    border-radius: 30px;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    filter: brightness(1.2);
+    transform: translateY(-2px);
+}
+
+/*---------------------------------*/
+/*GAME PAGE SPECIFIC STYLES*/
+/*---------------------------------*/
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /*centers the header and instructions */
+}
+
+.instructions {
+    margin-bottom: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.tile {
+    width: 60px;
+    height: 60px;
+    border: 2px solid var(--seafoam);
+    background-color: rgba(238, 232, 213, 0.1);
+    color: var(--sand);
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+/*feedback states */
+.correct { background-color: var(--correct) !important; border-color: var(--correct) !important; color: white; }
+.present { background-color: var(--present) !important; border-color: var(--present) !important; color: white; }
+.absent  { background-color: var(--absent) !important; border-color: var(--absent) !important; color: white; }
+
+.status-message { height: 30px; margin: 15px 0; font-size: 1.2rem; }
+.hidden { display: none; }
+
+/*fix: restart button now matches the index button style */
+#restart-btn {
+    display: inline-block;
+    background-color: var(--seafoam);
+    color: var(--deep-ocean);
+    padding: 12px 30px;
+    font-weight: bold;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.tile:not(:empty):not(.correct):not(.present):not(.absent) {
+    border-color: var(--sand);
+    transform: scale(1.05);
+    transition: transform 0.1s ease;
+}
+
+#restart-btn:hover {
+    filter: brightness(1.2);
+    transform: translateY(-2px);
+}
+
+/*---------------------------------*/
+/*BUBBLE ANIMATION*/
+/*---------------------------------*/
+.ocean-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /*keep bubbles behind the game board */
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.bubble {
+    position: absolute;
+    bottom: -100px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    animation: rise 10s infinite ease-in;
+}
+
+/*creates different sizes and speeds for each bubble*/
+.bubble:nth-child(1) { left: 10%; width: 40px; height: 40px; animation-duration: 8s; }
+.bubble:nth-child(2) { left: 20%; width: 20px; height: 20px; animation-duration: 12s; animation-delay: 2s; }
+.bubble:nth-child(3) { left: 35%; width: 50px; height: 50px; animation-duration: 10s; animation-delay: 4s; }
+.bubble:nth-child(4) { left: 50%; width: 30px; height: 30px; animation-duration: 7s;  animation-delay: 1s; }
+.bubble:nth-child(5) { left: 65%; width: 60px; height: 60px; animation-duration: 15s; }
+.bubble:nth-child(6) { left: 80%; width: 25px; height: 25px; animation-duration: 9s;  animation-delay: 3s; }
+.bubble:nth-child(7) { left: 85%; width: 45px; height: 45px; animation-duration: 11s; animation-delay: 5s; }
+.bubble:nth-child(8) { left: 95%; width: 20px; height: 20px; animation-duration: 8s;  animation-delay: 6s; }
+
+@keyframes rise {
+    0% {
+        transform: translateY(10vh);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.5;
+    }
+    90% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}

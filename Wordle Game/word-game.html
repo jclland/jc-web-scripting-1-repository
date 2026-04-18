@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Aquatic Wordle Game</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/word-game.css">
+</head>
+
+<body>
+    <!--bubbles -->
+    <div class="ocean-background">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
+    <div class="game-container">
+        <header>
+            <h1>Aquatic Wordle Game</h1>
+            <p class="instructions">
+                Guess the hidden five-letter word in six tries.<br>
+                Type a word and press <strong>Enter</strong> to submit.
+            </p>
+        </header>
+
+        <div id="game-board" class="grid-container"></div>
+
+        <div id="message-area" class="status-message">
+            Type a word to begin.
+        </div>
+
+        <div class="action-area">
+            <button id="restart-btn" class="hidden">Restart Game</button>
+        </div>
+    </div>
+
+    <script src="js/word-game.js"></script>
+</body>
+</html>
