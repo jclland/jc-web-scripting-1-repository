@@ -61,7 +61,7 @@ header {
 .column-header {
     padding: 1rem; display: flex; justify-content: space-between;
     border-bottom: 1px solid var(--border);
-    cursor: grab; /* header is now the drag handle */
+    cursor: grab;
 }
 
 .column-header:active {

@@ -24,9 +24,6 @@ function renderBoard() {
         colEl.dataset.index = colIdx;
         colEl.dataset.colId = col.id;
 
-        //we removed draggable=true from colEl to prevent card/column conflicts
-        //the column-header will now handle the dragging logic
-
         colEl.innerHTML = `
             <div class="column-header" draggable="true">
                 <h2>${col.title}</h2>
@@ -103,7 +100,6 @@ function createCard(item, colId, idx) {
     card.draggable = true;
     
     card.addEventListener('dragstart', (e) => {
-        //crucial: ensure column drag state is null so we don't swap columns while moving a card
         draggedColumnIdx = null; 
         e.dataTransfer.setData('application/json', JSON.stringify({ colId, idx }));
         setTimeout(() => card.classList.add('dragging-card'), 0);
@@ -169,7 +165,7 @@ function handleDrop(e, targetColId) {
     }
 }
 
-//--- ui and form handlers (unchanged logic, cleaned up) ---
+//ui and form handlers
 
 function openEditModal(colId, idx) {
     const col = boardData.columns.find(c => c.id === colId);
