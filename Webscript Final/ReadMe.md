@@ -19,3 +19,4 @@ This project is a dynamic, browser-based Kanban board designed for organizing no
 
 ## Screenshot
 ![Grid Board Screenshot](images/screenshot.png)
+![Grid Board Menu Screenshot](images/screenshot2.png)

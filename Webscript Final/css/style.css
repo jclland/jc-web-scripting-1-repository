@@ -210,6 +210,27 @@ header {
     width: 100%; padding: 10px; background: #020c1b; border: 1px solid var(--border); color: white; border-radius: 6px; 
 }
 
+/* cancel button specific styling */
+#close-modal {
+    background: transparent;
+    border: 1px solid #ff4d4d;
+    color: #ff4d4d;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+#close-modal:hover {
+    background: rgba(255, 77, 77, 0.1);
+    transform: translateY(-2px);
+}
+
+#close-modal:active {
+    transform: translateY(0);
+}
+
 /*mobile layout*/
 @media (max-width: 768px) {
     header { flex-direction: column; gap: 1rem; padding: 1.5rem; text-align: center; }
